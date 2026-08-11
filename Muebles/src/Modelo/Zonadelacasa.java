@@ -1,5 +1,5 @@
 package Modelo;
 
-public class Zonadelacasa {
-		
+public enum Zonadelacasa {
+	LIVING, COMEDOR, COCINA, HABITACION;
 }

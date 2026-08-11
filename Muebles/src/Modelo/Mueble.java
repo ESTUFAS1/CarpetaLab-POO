@@ -6,7 +6,6 @@ public abstract class  Mueble {
 	private float posicionY;
 	private float posicionZ;
 	private float vida;
-	private int cantidadPersonas;
 	private Nombre nombre;
 	private float temperatura;
 	private Estado estado;
@@ -15,13 +14,12 @@ public abstract class  Mueble {
 
 
 
-	public Mueble(float posicionX, float posicionY, float posicionZ, Nombre nombre, float vida, int cantidadPersonas, float temperatura, Estado estado, float suciedad) {
+	public Mueble(float posicionX, float posicionY, float posicionZ, Nombre nombre, float vida, float temperatura, Estado estado, float suciedad) {
 		this.nombre = nombre;
 		this.setVida(vida);
 		this.posicionX = posicionX;
 		this.posicionY = posicionY;
 		this.posicionZ = posicionZ;
-		this.setCantidadPersonas(cantidadPersonas);
 		this.setTemperatura(temperatura);
 		this.estado = estado;
 		this.suciedad = suciedad;
@@ -42,6 +40,7 @@ public abstract class  Mueble {
 	public void ensuciarMueble() {
 		System.out.println("Ensuciando...");
 	}
+
 	
 	public float getPosicionX() {
 		return posicionX;
@@ -76,13 +75,6 @@ public abstract class  Mueble {
 		this.vida = vida;
 	}
 
-	public int getCantidadPersonas() {
-		return cantidadPersonas;
-	}
-
-	public void setCantidadPersonas(int cantidadPersonas) {
-		this.cantidadPersonas = cantidadPersonas;
-	}
 
 	public float getTemperatura() {
 		return temperatura;

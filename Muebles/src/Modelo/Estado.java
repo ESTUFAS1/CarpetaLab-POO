@@ -1,5 +1,5 @@
 package Modelo;
 
 public enum Estado {
-	NUEVO, USADO, ROTO;
+	NUEVONUEVITO, USADO, ROTIDO;
 }
