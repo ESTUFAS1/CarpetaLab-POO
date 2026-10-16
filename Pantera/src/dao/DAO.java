@@ -11,12 +11,12 @@ public class DAO {//informacion de la cuenta y ruta
 	String path = "jdbc:mysql://localhost:3306/basedata";
 	
 
-	public int Agregar() {
+	public int agregar() {
 		Connection conexion = null;
 		int filas = 0;
 		try {
 		conexion = conectar();
-		String sql = "INSERT INTO `tabla`(`id`,`nombre`,`DNI`)VALUES(6,'panterarosa',3456787)";
+		String sql = "INSERT INTO `humano`(`id`,`nombre`,`DNI`)VALUES(4,'hola',1356326)";
 		Statement stmt = conexion.createStatement();
 		filas = stmt.executeUpdate(sql);
 		}
@@ -31,7 +31,6 @@ public class DAO {//informacion de la cuenta y ruta
 			}
 		}
 		return filas;
-		
 	}
 		
 	
@@ -44,8 +43,30 @@ public class DAO {//informacion de la cuenta y ruta
 		catch(SQLException e){
 			e.printStackTrace();
 		}
-		
-	
 		return conexion;
 	}
+	
+	//________________________________________TERMINAME :C________________________________________________________
+	public int eliminar() {
+		Connection conexion = null;
+		int filas=0;
+		try {
+			conexion = conectar();
+			String sql = "delete from `basedata`.`humano`";
+			Statement stmt = conexion.createStatement();
+			filas = stmt.executeUpdate(sql);
+			}
+			catch(SQLException e){
+				e.printStackTrace();
+			}
+			finally {
+				try {
+					conexion.close();
+				}catch(SQLException e) {
+					e.printStackTrace();
+				}
+			}
+			return filas;
+	}
+
 }
